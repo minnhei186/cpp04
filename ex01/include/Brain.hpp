@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hosokawa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/16 12:39:42 by hosokawa          #+#    #+#             */
-/*   Updated: 2024/12/16 16:40:06 by hosokawa         ###   ########.fr       */
+/*   Created: 2024/12/16 15:59:40 by hosokawa          #+#    #+#             */
+/*   Updated: 2024/12/16 16:05:44 by hosokawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once 
+#pragma once
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <string>
+#include <iostream>
 
-class Cat:public Animal
+
+class Brain
 {
 	private:
-		Brain* brain;
+		std::string ideas[100];
 	public:
-		Cat();
-		Cat(const Cat& origin); 
-		Cat& operator=(const Cat& origin);
-		~Cat();
-
-		void makeSound(void)const;
+		Brain();
+		Brain(const Brain& origin);
+		Brain& operator=(const Brain& origin);
+		~Brain();
 };
+
+
+
+
 

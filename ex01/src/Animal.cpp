@@ -6,7 +6,7 @@
 /*   By: hosokawa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:29:05 by hosokawa          #+#    #+#             */
-/*   Updated: 2024/12/16 14:39:07 by hosokawa         ###   ########.fr       */
+/*   Updated: 2024/12/19 15:59:47 by hosokawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 Animal::Animal():type("Animal")
 {
-	std::cout<<" Animal:"<<type<<" no arg default constructor called "<<std::endl;
+	std::cout<<" Animal:"<<type<<" default constructor called "<<std::endl;
 }
 
 
 Animal::Animal(std::string newType):type(newType)
 {
-	std::cout<<" Animal:"<<type<<" default constructor called "<<std::endl;
+	std::cout<<" Animal:"<<type<<" named constructor called "<<std::endl;
 }
 
 Animal::Animal(const Animal& origin)
@@ -49,6 +49,10 @@ void Animal::makeSound(void)const
 	std::cout<<" Animal:"<<type<<" makeSound called "<<std::endl;
 }
 
+std::string    Animal::getType( void ) const
+{
+    return this->type;
+}
 
 
 

@@ -6,7 +6,7 @@
 /*   By: hosokawa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:29:05 by hosokawa          #+#    #+#             */
-/*   Updated: 2024/12/16 15:41:08 by hosokawa         ###   ########.fr       */
+/*   Updated: 2024/12/19 16:03:31 by hosokawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 WrongAnimal::WrongAnimal():type("WrongAnimal")
 {
-	std::cout<<" WrongAnimal:"<<type<<" no arg default constructor called "<<std::endl;
+	std::cout<<" WrongAnimal:"<<type<<" default constructor called "<<std::endl;
 }
 
 
 WrongAnimal::WrongAnimal(std::string newType):type(newType)
 {
-	std::cout<<" WrongAnimal:"<<type<<" default constructor called "<<std::endl;
+	std::cout<<" WrongAnimal:"<<type<<" named constructor called "<<std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& origin)
@@ -47,6 +47,11 @@ WrongAnimal::~WrongAnimal()
 void WrongAnimal::makeSound(void)const 
 {
 	std::cout<<" WrongAnimal:"<<type<<" makeSound called "<<std::endl;
+}
+
+std::string    WrongAnimal::getType( void ) const
+{
+    return this->type;
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: hosokawa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:16:00 by hosokawa          #+#    #+#             */
-/*   Updated: 2024/12/16 14:40:21 by hosokawa         ###   ########.fr       */
+/*   Updated: 2024/12/19 15:58:18 by hosokawa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ class Animal
 		virtual ~Animal();
 
 		virtual void makeSound(void) const;
+		std::string     getType( void ) const;
 };
